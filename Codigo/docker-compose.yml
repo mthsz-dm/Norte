@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: norte-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME:-norte}
+      POSTGRES_USER: ${DB_USER:-norte}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-norte}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - norte_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  norte_postgres_data:

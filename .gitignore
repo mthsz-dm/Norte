@@ -1,0 +1,32 @@
+# ---- Ambiente ----
+.env
+*.env.local
+
+# ---- Backend (Java / Gradle / Micronaut) ----
+build/
+.gradle/
+.micronaut/
+out/
+bin/
+*.class
+
+# ---- Frontend (Node / Vite) ----
+node_modules/
+dist/
+dist-ssr/
+*.local
+coverage/
+
+# ---- IDEs ----
+.idea/
+.vscode/
+*.iml
+*.iws
+
+# ---- SO ----
+.DS_Store
+Thumbs.db
+
+# ---- Logs ----
+*.log
+npm-debug.log*

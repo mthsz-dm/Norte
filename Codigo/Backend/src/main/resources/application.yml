@@ -1,0 +1,18 @@
+micronaut:
+  application:
+    name: backend
+
+datasources:
+  default:
+    url: "jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5433}/${DB_NAME:norte}"
+    username: "${DB_USER:norte}"
+    password: "${DB_PASSWORD:norte}"
+    driver-class-name: org.postgresql.Driver
+    dialect: POSTGRES
+
+flyway:
+  datasources:
+    default:
+      enabled: true
+      locations:
+        - classpath:db/migration
